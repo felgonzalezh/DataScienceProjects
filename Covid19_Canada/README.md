@@ -3,7 +3,7 @@ OBJECTIVE
 ========================
 
 The aim of this project is to predict the daily covid cases by province in Canada.
-A particular purpose is to research if there is any influence of the weather on the covid numbers.
+The particular purpose is to research if there is any influence of the weather on the covid numbers.
 
 ========================
 DATA BASES
@@ -21,10 +21,11 @@ At the moment, the considered databases are:
 PYSPARK NOTEBOOKS
 ========================
 
-With this purpose, there are two notebooks:
+With this purpose, there are three notebooks:
 
-     1. COVID_PROJECT_DATABASE: To built the entire dataset with the databases mentioned above
-     2. Covid_Project_ML: To predict the number of cases by province
+     1. 1_Projet_Covid19-Collecte_et_Integration_des_donnees.ipynb: To built the entire dataset with the databases mentioned above.
+     2. 2_Projet_Covid19_Traitement.ipynb: To clean and analyze the data.
+     3. 3_Projet_Covid19_Developpement_du_modele.ipynb: To predict the number of cases by province
 
 ==========================
 TO RUN THE PROJECT:
@@ -34,14 +35,17 @@ TO RUN THE PROJECT:
      	- DB/Station_Inventory_EN.csv   -> "/FileStore/tables/Covid_DB/Weather/Station_Inventory_EN.csv"
 	- DB/population.csv  -> "/FileStore/tables/Covid_DB/Population/population.csv"
 
-      2. Open COVID_PROJECT_DATABASE using Databricks:
+      2. Open the 1_Projet_Covid19-Collecte_et_Integration_des_donnees module using Databricks:
       	 -If you are running for the first time, Set these variables to True:
       	 update_covidDB = True
 	 update_2021weatherdata = True
 	 update_2020weatherdata = True
 	 - Run all the project
 
-      3. Open Covid_Project_ML using Databricks:
+      3. Open 2_Projet_Covid19_Traitement.ipynb
+      	 - Run all the project
+
+      4. Open 3_Projet_Covid19_Developpement_du_modele.ipynb using Databricks:
       	 Run all cells. The notebook will predict the todays cases (that will be reported on the next day).
 	 Don't pay attention to the dates in the markdown cells
 	 
